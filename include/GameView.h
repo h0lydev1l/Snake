@@ -22,7 +22,7 @@ class GameView
         int speeder=5;
         int moveTimer=0;
         int appleTimer=0;
-
+        void drawHead(sf::RenderWindow &window, int x, int y);
         void drawSnake(sf::RenderWindow &window, int x, int y);
         void drawEmpty(sf::RenderWindow &window, int x, int y);
         void drawApple(sf::RenderWindow &window, int x, int y);
@@ -33,10 +33,13 @@ class GameView
         sf::ConvexShape pole;
         sf::ConvexShape bg;
         sf::ConvexShape pole1;
+        sf::ConvexShape pole2;
         sf::Texture backgrnd;
         sf::Texture apple;
         sf::Texture empty;
         sf::Texture snake;
+        sf::Texture head;
+        sf::Texture head2;
         sf::Text speed;
         sf::Texture win;
         sf::Texture lose;

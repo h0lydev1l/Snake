@@ -52,6 +52,8 @@
 		<Unit filename="image/background.png" />
 		<Unit filename="image/empty.png" />
 		<Unit filename="image/endgame.png" />
+		<Unit filename="image/head.png" />
+		<Unit filename="image/head2.png" />
 		<Unit filename="image/snake.png" />
 		<Unit filename="image/wingame.png" />
 		<Unit filename="include/GameView.h" />

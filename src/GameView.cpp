@@ -141,6 +141,10 @@ void GameView::drawBoard(sf::RenderWindow &window)
             {
                 drawSnake(window, idx_x,idx_y);
             }
+            if(board.snakePosition[0].x==idx_x and board.snakePosition[0].y==idx_y)
+            {
+                drawHead(window, idx_x, idx_y);
+            }
             if(board.board[idx_y][idx_x].isApple==true)
             {
                 drawApple(window, idx_x,idx_y);
@@ -151,6 +155,21 @@ void GameView::drawBoard(sf::RenderWindow &window)
             }
         }
     }
+}
+
+void GameView::drawHead(sf::RenderWindow &window, int idx_x, int idx_y)
+{
+    pole2.setPointCount(4);
+    pole2.setPoint(0, sf::Vector2f(x0+idx_x*field_lenght,y0+idx_y*field_lenght));
+    pole2.setPoint(1, sf::Vector2f(x0+field_lenght+idx_x*field_lenght-1,y0+idx_y*field_lenght));
+    pole2.setPoint(2, sf::Vector2f(x0+field_lenght+idx_x*field_lenght-1,y0+field_lenght+idx_y*field_lenght-1));
+    pole2.setPoint(3, sf::Vector2f(x0+idx_x*field_lenght,y0+field_lenght+idx_y*field_lenght-1));
+    pole2.setTexture(&head);
+    if(board.kierunek==UP or board.kierunek==DOWN)
+        pole2.setTexture(&head2);
+        else
+            pole2.setTexture(&head);
+    window.draw(pole2);
 }
 
 void GameView::drawSnake(sf::RenderWindow &window, int idx_x, int idx_y)
@@ -239,4 +258,6 @@ void GameView::loadTextures()
     snake.loadFromFile("image/snake.png");
     win.loadFromFile("image/wingame.png");
     lose.loadFromFile("image/endgame.png");
+    head.loadFromFile("image/head.png");
+    head2.loadFromFile("image/head2.png");
 }
