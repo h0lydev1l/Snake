@@ -48,7 +48,6 @@ public:
     direction kierunek=LEFT;
     void setBoard();
     void updateBoard();
-    bool isWall();
     bool canMove(int x, int y);
     bool isHitted(int x, int y);
     bool isCollected(int x, int y);

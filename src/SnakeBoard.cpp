@@ -23,13 +23,7 @@ void SnakeBoard::setBoard()
     }
 }
 
-bool SnakeBoard::isWall()
-{
-    if(snakePosition[0].x<0 or snakePosition[0].x>=boardWidth or snakePosition[0].y<0 or snakePosition[0].y>=boardHeight)
-        return true;
-    else
-        return false;
-}
+
 
 bool SnakeBoard::canMove(int x, int y)
 {
