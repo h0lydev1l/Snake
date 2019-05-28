@@ -1,1 +1,1 @@
-![SnakeReadMePNG](https://github.com/h0lydev1l/Snake/blob/master/read.png)
+![SnakeReadMePNG](https://github.com/h0lydev1l/Snake/blob/master/readme.png)
